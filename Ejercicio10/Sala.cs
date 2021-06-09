@@ -103,6 +103,7 @@ namespace Ejercicio10
                 catch (SocketException e) when (e.ErrorCode == (int)SocketError.AddressAlreadyInUse)
                 {
                     Console.WriteLine("Puerto ocupado");
+                    correcto = true;
                     if (puerto < IPEndPoint.MaxPort)
                     {
                         puerto++;
